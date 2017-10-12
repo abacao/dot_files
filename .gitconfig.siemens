@@ -1,0 +1,50 @@
+[user]
+    name = André Bação
+    email = andre@bacao.pt
+[core]
+    editor = vim
+
+[push]
+    # prevents your from accidentally pushing to a wrong branch
+    default = matching
+
+[alias]
+    dc     = diff --cached
+    co     = checkout
+    ci     = commit
+    cm     = commit -m
+    cma    = commit -am
+    pom    = push origin master
+    st     = status
+    br     = branch
+    lg1    = lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg2    = !git log --graph --pretty='format:%C(yellow)%h%C(reset) -%C(red)%d%C(reset) %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    slog   = log --oneline
+    rb     = rebase
+    rbc    = rebase --continue
+    rbi    = rebase -i
+    fap    = fetch --all --prune --progress
+    latest = for-each-ref --sort=-committerdate refs/heads refs/remotes --format='%(committerdate:iso8601)  %(refname:short)                        %(authorname)'
+    aliases = config --get-regexp '^alias\\.'
+
+[core]
+    excludesfile = /Users/abacao/.gitignore_global
+    gitproxy = gitproxy
+###############################################################
+# for gitproxy, create a file /bin/proxy with
+# _proxy=http://194.145.60.1
+# _proxyport=9400
+#
+# exec socat STDIO PROXY:$_proxy:$1:$2,proxyport=$_proxyport
+###############################################################
+[git]
+    aliases = config --get-regexp '^alias\\.'
+
+[commit]
+	template = /Users/abacao/.stCommitMsg
+
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
+
+[http]
+        proxy = http://194.145.60.1:9400
