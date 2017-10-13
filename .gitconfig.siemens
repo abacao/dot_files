@@ -17,9 +17,9 @@
     pom    = push origin master
     st     = status
     br     = branch
-    lg1    = lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg     = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lg2    = !git log --graph --pretty='format:%C(yellow)%h%C(reset) -%C(red)%d%C(reset) %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    slog   = log --oneline
+    lg1    = log --oneline
     rb     = rebase
     rbc    = rebase --continue
     rbi    = rebase -i
